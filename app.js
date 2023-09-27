@@ -1,8 +1,20 @@
 // crear un algoritmo con un condicional 
 
+let medioPago1 = ("efectivo")
+let medioPago2 = ("financiado")
+
+let medioPago = prompt ("Como desea abonar?")
+
+if ((medioPago == "efectivo") || (medioPago == "financiado")){
+console.log ("El pago se efectua: "+ medioPago) 
+} else {
+console.log ("Forma de pago incorrecta")
+}
 
 
-// crear un algoritmo utilizando un ciclo
+
+
+ // crear un algoritmo utilizando un ciclo
 
 let orden = prompt ("Que deseas ordenar?")
 let burgerPrecio = [2000, 2500, 3000]
