@@ -1,7 +1,7 @@
 let nombreUsuario = prompt (" nombre de usuario")
 let apellidoUsuario = prompt ("apellido del usuario")
 if ((nombreUsuario != "") && ( apellidoUsuario != "")) {
-    console.log ("Nombre: " + nombreUsuario  + "Apellido: " + apellidoUsuario) 
+    console.log ("Nombre:  " + nombreUsuario  + "Apellido: " + apellidoUsuario) 
 } else {
     console.log ("todos los campos son obligatorios")
 }
@@ -41,12 +41,13 @@ console.log (`Vas a ordenar ${orden} el monto total de tu orden es de ${burgerPr
         console.log ("Vas a elegir otra alternativa")
         break;
 }
+ //FOR-bucle
 
-
-
-
-
-
+let cantidad = parseInt (prompt ("Ingrese una cantidad"))
+for (let i=1; i<=10; i++) {
+    let resultado = cantidad * i
+    console.log (`${cantidad} x $ {i} = ${resultado}`)
+}
 
 
 
