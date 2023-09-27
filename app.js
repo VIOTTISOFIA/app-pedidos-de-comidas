@@ -1,3 +1,12 @@
+let nombreUsuario = prompt (" nombre de usuario")
+let apellidoUsuario = prompt ("apellido del usuario")
+if ((nombreUsuario != "") && ( apellidoUsuario != "")) {
+    console.log ("Nombre: " + nombreUsuario  + "Apellido: " + apellidoUsuario) 
+} else {
+    console.log ("todos los campos son obligatorios")
+}
+
+
 // crear un algoritmo con un condicional 
 
 let medioPago1 = ("efectivo")
