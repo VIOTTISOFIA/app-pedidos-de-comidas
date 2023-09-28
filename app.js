@@ -9,8 +9,8 @@ if ((nombreUsuario != "") && ( apellidoUsuario != "")) {
 
 // crear un algoritmo con un condicional 
 
-let medioPago1 = ("efectivo")
-let medioPago2 = ("financiado")
+let medioPago1 = "efectivo"
+let medioPago2 = "financiado"
 
 let medioPago = prompt ("Como desea abonar?")
 
@@ -46,8 +46,13 @@ console.log (`Vas a ordenar ${orden} el monto total de tu orden es de ${burgerPr
 let cantidad = parseInt (prompt ("Ingrese una cantidad"))
 for (let i=1; i<=10; i++) {
     let resultado = cantidad * i
-    console.log (`${cantidad} x $ {i} = ${resultado}`)
+    console.log (resultado)
 }
+
+
+
+
+
 
 
 
