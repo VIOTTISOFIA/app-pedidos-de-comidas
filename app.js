@@ -46,7 +46,7 @@ console.log (`Vas a ordenar ${orden} el monto total de tu orden es de ${burgerPr
 let cantidad = parseInt (prompt ("Ingrese una cantidad"))
 for (let i=1; i<=10; i++) {
     let resultado = cantidad * i
-    console.log (resultado)
+console.log (`${cantidad} x ${i}= ${resultado}`)
 }
 
 
