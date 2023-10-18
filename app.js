@@ -1,10 +1,15 @@
-// let nombreUsuario = prompt (" Nombre de usuario")
-// let apellidoUsuario = prompt ("Apellido del usuario")
+let nombreUsuario = prompt (" Nombre de usuario")
+let apellidoUsuario = prompt ("Apellido del usuario")
 // if ((nombreUsuario != "") && ( apellidoUsuario != "")) {
 //     console.log ("Nombre:  " + nombreUsuario  + "Apellido: " + apellidoUsuario) 
 // } else {
-//     console.log ("todos los campos son obligatorios")
+//         console.log ("todos los campos son obligatorios")
 // }
+
+const nombre = document.querySelector ("nombreUsuario")
+console.log ("nombre")
+const apellido = document.getElementsByTagName ("apellidoUsuario")
+console.log ("apellido")
 
 const title = document.querySelector ("h1").textContent = "Welcome to Smart Order"
 console.log (title)
@@ -17,7 +22,7 @@ const burgerList = [
     {id: 4, title: "Big tasty bacon menu", precio: 3500, imagen: "", Desc:"Desc:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", }
 
 ];
-   console.log (burgerList)
+console.log (burgerList)
 
 for (let c of burgerList ) {
     let contenedor = document.createElement ("div")
@@ -30,10 +35,9 @@ contenedor.innerHTML =  `
 document.body.appendChild(contenedor)
 }
 
-let fruits = ["Apples", "Pear", "Orange"];
 
-// push a new value into the "copy"
-let agregarCarrito = burgerList;
+// PUSH
+const agregarCarrito =[]
 agregarCarrito.push("original burger");
 console.log (agregarCarrito)
 
@@ -54,7 +58,16 @@ console.log (newlist)
 let resultado = burgerList.filter ((p)=> p.precio <= 2500)
 console.log(resultado)
 
+//REDUCE
 
+const carrito = [
+    {id: 3, title: "Cheeseburger", precio:3000, imagen:"",Desc:"Desc:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+    {id: 4, title: "Big tasty bacon menu", precio: 3500, imagen: "", Desc:"Desc:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+    {id: 6, title: "Double big tasty bacon", precio:4000, imagen:""},
+    {id: 7, title: "Quarter pounder menu", precio: 5000, imgen:""}
+]
+let total = carrito.reduce( (accum,o)=> {return accum + p .precio},0)
+console.log (total)
 
 
 // // crear un algoritmo con un condicional 
