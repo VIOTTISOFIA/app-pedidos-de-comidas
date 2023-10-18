@@ -11,8 +11,8 @@ if ((nombreUsuario != "") && ( apellidoUsuario != "")) {
 // const apellido = document.getElementsByTagName ("apellidoUsuario")
 // console.log ("apellido")
 
-// const title = document.querySelector ("h1").textContent = "Welcome to Smart Order"
-// console.log (title)
+const title = document.querySelector ("h1").textContent = "Welcome to Smart Order"
+console.log (title)
 
 
 const burgerList = [
@@ -36,19 +36,13 @@ const burgerList = [
 // }
 
 
-// PUSH
-
-const newProduct = {id: 8, title: "Basic burger menu", precio: 2500, imgen:""}
-burgerList.push("newProduct");
-console.log (burgerList)
-
-
-
 const burgerList2 = [
     {id: 5, title: "Big tasty bacon menu", precio:3500, imagen: ""},
     {id: 6, title: "Double big tasty bacon", precio:4000, imagen:""},
     {id: 7, title: "Quarter pounder menu", precio: 5000, imgen:""}
 ];
+
+//CONCATENACION 
 
 const newlist = burgerList.concat(burgerList2);
 
@@ -67,10 +61,23 @@ const carrito = [
     {id: 6, title: "Double big tasty bacon", precio:4000, imagen:""},
     {id: 7, title: "Quarter pounder menu", precio: 5000, imgen:""}
 ]
-let total = carrito.reduce( (accum,o)=> {return accum + p .precio},0)
+const total = carrito.reduce((accumulador, carrito) => accumulador + carrito.precio,0);
 console.log (total)
 
+//PUSH 
+const newBurger = [{id: 8, title: "Basic burger ,menu", precio: 3500, imgen:""}]
+carrito.push (newBurger)
+console.log (carrito)
 
+
+
+
+const productos = ["burger", "soda", "fries"]
+productos.push ("mayo")
+console.log (productos)
+
+// JOIN
+console.log (productos.join(" / "));
 // // crear un algoritmo con un condicional 
 
 // let medioPago1 = "efectivo"
