@@ -1,18 +1,18 @@
 let nombreUsuario = prompt (" Nombre de usuario")
 let apellidoUsuario = prompt ("Apellido del usuario")
-// if ((nombreUsuario != "") && ( apellidoUsuario != "")) {
-//     console.log ("Nombre:  " + nombreUsuario  + "Apellido: " + apellidoUsuario) 
-// } else {
-//         console.log ("todos los campos son obligatorios")
-// }
+if ((nombreUsuario != "") && ( apellidoUsuario != "")) {
+    console.log ("Nombre:  " + nombreUsuario  + "Apellido: " + apellidoUsuario) 
+} else {
+        console.log ("todos los campos son obligatorios")
+}
 
-const nombre = document.querySelector ("nombreUsuario")
-console.log ("nombre")
-const apellido = document.getElementsByTagName ("apellidoUsuario")
-console.log ("apellido")
+// const nombre = document.querySelector ("nombreUsuario")
+// console.log ("nombre")
+// const apellido = document.getElementsByTagName ("apellidoUsuario")
+// console.log ("apellido")
 
-const title = document.querySelector ("h1").textContent = "Welcome to Smart Order"
-console.log (title)
+// const title = document.querySelector ("h1").textContent = "Welcome to Smart Order"
+// console.log (title)
 
 
 const burgerList = [
@@ -22,24 +22,25 @@ const burgerList = [
     {id: 4, title: "Big tasty bacon menu", precio: 3500, imagen: "", Desc:"Desc:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", }
 
 ];
-console.log (burgerList)
+// console.log (burgerList)
 
-for (let c of burgerList ) {
-    let contenedor = document.createElement ("div")
-contenedor.innerHTML =  `
-<h4>Burger:${c.title}</h4>
-<h5>Precio:${c.precio}</h5>
-<p>Description: ${c.Desc}</p>
-<button class= "btn btn-primary"> Add order </button>
-`
-document.body.appendChild(contenedor)
-}
+// for (let c of burgerList ) {
+//     let contenedor = document.createElement ("div")
+// contenedor.innerHTML =  `
+// <h4>Burger:${c.title}</h4>
+// <h5>Precio:${c.precio}</h5>
+// <p>Description: ${c.Desc}</p>
+// <button class= "btn btn-primary"> Add order </button>
+// `
+// document.body.appendChild(contenedor)
+// }
 
 
 // PUSH
-const agregarCarrito =[]
-agregarCarrito.push("original burger");
-console.log (agregarCarrito)
+
+const newProduct = {id: 8, title: "Basic burger menu", precio: 2500, imgen:""}
+burgerList.push("newProduct");
+console.log (burgerList)
 
 
 
