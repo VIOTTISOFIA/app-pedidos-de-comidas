@@ -52,22 +52,37 @@
     <h1>Bienvenidos a SmartOrder</h1>
     <section class="restaurants">
         <div class="categorias">
-            <div class="burger">
-                <div class="card" style="width: 18rem;">
-                    <img src="./img/fast-food (1).png" class="photo" alt="burger">
-                    <div class="contenedor">
-                        <!-- <h5 class="title">Original burger</h5>
-                        <h6>Precio: $2000 </h6>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna
-                            aliqua.
-                            pharetra et.</p>
-                        <a href="#" class="btn btn-primary">Add order</a> -->
-                    </div>
-                </div>
-            </div>
+            <!-- filter buttons -->
+            <div class="btn-container">
+                <button class="filter-btn" type="button" data-id="ALL">ALL</button>
+                <button class="filter-btn" type="button" data-id="BURGER">BURGER</button>
+                <button class="filter-btn" type="button" data-id="PIZZA">PIZZA</button>
+                <button class="filter-btn" type="button" data-id="ITALIAN">ITALIAN</button>
 
-        </div>
+            </div>
+            <!-- Options Items-->
+            <div class="section-center">
+                <!--Single Item-->
+                <article class="OptionsItem">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/burger.png" class="photo" alt="burger">
+                        <div class="contenedor">
+                            <header>
+                                <h5 class="title">Original burger</h5>
+                                <h6>Precio: $2000 </h6>
+                            </header>
+                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna
+                                aliqua.
+                                pharetra et.</p>
+                            <button type="button" class="btn btn-primary" id="boton">Add order</button>
+                            <input type="email" class="form-control" id="name" placeholder="name" </div>
+                        </div>
+                    </div>
+                </article>
+
+
+            </div>
 
 
 

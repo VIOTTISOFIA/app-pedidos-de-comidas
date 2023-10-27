@@ -1,25 +1,37 @@
-let nombreUsuario = prompt (" Nombre de usuario")
-let apellidoUsuario = prompt ("Apellido del usuario")
-if ((nombreUsuario != "") && ( apellidoUsuario != "")) {
-    console.log ("Nombre:  " + nombreUsuario  + "Apellido: " + apellidoUsuario) 
-} else {
-        console.log ("todos los campos son obligatorios")
-}
+// console.log (document.body)
+
+
+
+// let nombreUsuario = prompt (" Nombre de usuario")
+// let apellidoUsuario = prompt ("Apellido del usuario")
+// if ((nombreUsuario != "") && ( apellidoUsuario != "")) {
+//     console.log ("Nombre:  " + nombreUsuario  + "Apellido: " + apellidoUsuario) 
+// } else {
+//         console.log ("todos los campos son obligatorios")
+// }
 
 // const nombre = document.querySelector ("nombreUsuario")
 // console.log ("nombre")
 // const apellido = document.getElementsByTagName ("apellidoUsuario")
 // console.log ("apellido")
 
-const title = document.querySelector ("h1").textContent = "Welcome to Smart Order"
-console.log (title)
+const titulo = document.querySelector ("h1").textContent = "Welcome to Smart Order"
+console.log (titulo)
 
 
-const burgerList = [
-    {id: 1, title: "Homestyle Bacon pepper", precio: 1500, imagen: "img/fast-food (1).png", Desc:"Desc:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
-    {id: 2, title: "Chicken salsa cheese", precio:2000, imagen: "", Desc:"Desc:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
-    {id: 3, title: "Cheeseburger", precio:3000, imagen:"",Desc:"Desc:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
-    {id: 4, title: "Big tasty bacon menu", precio: 3500, imagen: "", Desc:"Desc:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", }
+const Options = [
+    {id: 1, category:"BURGER",title: "Homestyle Bacon pepper", precio: 1500, imagen: "./burger.png", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+    {id: 2, category:"BURGER",title: "Chicken salsa cheese", precio:2000, imagen: "", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+    {id: 3, category:"BURGER", title: "Cheeseburger", precio:3000, imagen:"",Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+    {id: 4, category:"BURGER",title: "Big tasty bacon menu", precio: 3500, imagen: "", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+    {id: 5, category:"PIZZA", title: "Margherita", precio: 1500, imagen: "./pizza.png", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+    {id: 7, category:"PIZZA", title: "Capricciosa", precio:2000, imagen: "", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+    {id: 8, category:"PIZZA",title: "Quatro stagione", precio:3000, imagen:"",Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+    {id: 9, category:"PIZZA", title: "Hawaii", precio: 3500, imagen: "", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+    {id: 10, category:"ITALIAN", title: "Pane con carne e prezzemolo", precio: 1500, imagen: "img/fast-food (1).png", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+    {id: 11, category:"ITALIAN", title: "Bruschetta", precio:2000, imagen: "", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+    {id: 12, category:"ITALIAN", title: "Carpaccio di bresaola", precio:3000, imagen:"",Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+    {id: 13, category:"ITALIAN", title: "Calzone", precio: 3500, imagen: "", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", }
 
 ];
 // console.log (burgerList)
@@ -36,48 +48,136 @@ const burgerList = [
 // }
 
 
-const burgerList2 = [
-    {id: 5, title: "Big tasty bacon menu", precio:3500, imagen: ""},
-    {id: 6, title: "Double big tasty bacon", precio:4000, imagen:""},
-    {id: 7, title: "Quarter pounder menu", precio: 5000, imgen:""}
-];
-
-//CONCATENACION 
-
-const newlist = burgerList.concat(burgerList2);
-
-console.log (newlist)
-
-//FILTER
-
-let resultado = burgerList.filter ((p)=> p.precio <= 2500)
-console.log(resultado)
-
-//REDUCE
-
-const carrito = [
-    {id: 3, title: "Cheeseburger", precio:3000, imagen:"",Desc:"Desc:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
-    {id: 4, title: "Big tasty bacon menu", precio: 3500, imagen: "", Desc:"Desc:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
-    {id: 6, title: "Double big tasty bacon", precio:4000, imagen:""},
-    {id: 7, title: "Quarter pounder menu", precio: 5000, imgen:""}
-]
-const total = carrito.reduce((accumulador, carrito) => accumulador + carrito.precio,0);
-console.log (total)
-
-//PUSH 
-const newBurger = [{id: 8, title: "Basic burger ,menu", precio: 3500, imgen:""}]
-carrito.push (newBurger)
-console.log (carrito)
 
 
+// const burgerList2 = [
+//     {id: 5, title: "Big tasty bacon menu", precio:3500, imagen: ""},
+//     {id: 6, title: "Double big tasty bacon", precio:4000, imagen:""},
+//     {id: 7, title: "Quarter pounder menu", precio: 5000, imgen:""}
+// ];
+
+// //CONCATENACION 
+
+// const newlist = burgerList.concat(burgerList2);
+
+// console.log (newlist)
+
+// //FILTER
+
+// let resultado = burgerList.filter ((p)=> p.precio <= 2500)
+// console.log(resultado)
+
+// //REDUCE
+
+// const carrito = [
+//     {id: 3, title: "Cheeseburger", precio:3000, imagen:"",Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+//     {id: 4, title: "Big tasty bacon menu", precio: 3500, imagen: "", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+//     {id: 6, title: "Double big tasty bacon", precio:4000, imagen:""},
+//     {id: 7, title: "Quarter pounder menu", precio: 5000, imgen:""}
+// ]
+// const total = carrito.reduce((accumulador, carrito) => accumulador + carrito.precio,0);
+// console.log (total)
+
+// //PUSH 
+// // 1er ejemplo
+// const newBurger = [{id: 8, title: "Basic burger ,menu", precio: 3500, imgen:""}]
+// carrito.push (newBurger)
+// console.log (carrito)
 
 
-const productos = ["burger", "soda", "fries"]
-productos.push ("mayo")
-console.log (productos)
+// // 2do ejemplo
+// const productos = ["burger", "soda", "fries"]
+// productos.push ("mayo")
+// console.log (productos)
 
-// JOIN
-console.log (productos.join(" / "));
+// // JOIN
+// console.log (productos.join(" / "));
+
+
+// //pizzza
+
+// const pizzaList = [
+//     {id: 1,category:"pizza", title: "Margherita", precio: 1500, imagen: "pizza.pgn", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+//     {id: 2,category:"pizza", title: "Capricciosa", precio:2000, imagen: "", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+//     {id: 3, category:"pizza",title: "Quatro stagione", precio:3000, imagen:"",Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+//     {id: 4,category:"pizza", title: "Hawaii", precio: 3500, imagen: "", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", }
+
+// ];
+// for (let c of pizzaList ) {
+//     let contenedor = document.createElement ("div")
+// contenedor.innerHTML =  `
+// <h4>Pizza:${c.title}</h4>
+// <h5>Precio:${c.precio}</h5>
+// <p>Description: ${c.Desc}</p>
+// <button class= "btn btn-primary"> Add order </button>
+// `
+// document.body.appendChild(contenedor)
+// }
+// //Italian
+// const ItalianList = [
+//     {id: 1, category:"italian", title: "Pane con carne e prezzemolo", precio: 1500, imagen: "img/fast-food (1).png", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+//     {id: 2, category:"italian", title: "Bruschetta", precio:2000, imagen: "", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+//     {id: 3, category:"italian", title: "Carpaccio di bresaola", precio:3000, imagen:"",Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+//     {id: 4, category:"italian", title: "Calzone", precio: 3500, imagen: "", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", }
+
+// ];
+
+// for (let c of ItalianList ) {
+//     let contenedor = document.createElement ("div")
+// contenedor.innerHTML =  `
+// <h4>Italian Food:${c.title}</h4>
+// <h5>Precio:${c.precio}</h5>
+// <p>Description: ${c.Desc}</p>
+// <button class= "btn btn-primary"> Add order </button>
+// `
+// document.body.appendChild(contenedor)
+// }
+
+const sectioncenter = document.querySelector(".section-center")
+const filterBtns = document.querySelectorAll (".filter-btn")
+
+//Load Items
+
+window.addEventListener("DOMContentLoaded", function(){
+    displayOptionsItems(Options)
+
+    })
+
+// Filter Items
+
+filterBtns.forEach(function (btn){
+    btn.addEventListener ("click", function (e){
+        const category = e.currentTarget.dataset.id
+        const OptionsCategory = Options.filter (function(OptionsItems) {
+        if (OptionsItems.category === category) {
+            return OptionsItems}
+        })
+if (category === "ALL") {
+    displayOptionsItems(Options)
+} else {
+    displayOptionsItems(OptionsCategory)
+}
+})
+})
+
+
+function displayOptionsItems (OptionsItems) {
+    let displayOptions = OptionsItems.map(function (item) {
+
+    return `<article class="OptionsItem">
+    <img src=${item.img} class="photo" alt=${item.title}>
+        <div class="contenedor">
+                            <header>
+                                <h4>${item.title}</h4>
+                                <h5>${item.precio} </h5>
+                                <h6>${item.Desc}</h6>
+                            </header>
+    </article>`
+    })
+    displayOptions = displayOptions.join("");
+    sectioncenter.innerHTML = displayOptions
+    }
+
 // // crear un algoritmo con un condicional 
 
 // let medioPago1 = "efectivo"
@@ -293,3 +393,20 @@ console.log (productos.join(" / "));
 // const newlist = list.concat(list2);
 
 // console.log (newlist)
+
+
+//EVENTO 
+
+// const contenedor = document.querySelector (".burger")
+// contenedor.addEventListener("mouseenter",()=> {console.log ("mouse dentro del container")})
+
+// console.log (contenedor)
+
+
+// const boton = document.querySelector ("#boton")
+// boton.addEventListener ("click", ()=> {alert ("me diste click")})
+
+// const nombreinput = document.querySelector ("#name")
+
+// nombreinput.addEventListener ("keydown", ()=> {console.log ("Escribiendo")})
+// console.log (nombreinput)
