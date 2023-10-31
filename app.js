@@ -107,14 +107,41 @@ modalContainer.append(totalBuying)
 
 filterBtns.forEach(function (btn){
     btn.addEventListener ("click", function (e) {
-        const category = e.currentTarget.dataset.id
-        const OptionsCategory = Options.filter ((Options)=> {
-        if (OptionsCategory.category === category) {
-            return content}
-        })
-if (category === "ALL") {
-    (Options)
-}
+//         const category = e.currentTarget.dataset.id
+        // const OptionsCategory = Options.filter ((Op)=> {
+        //  if (OptionsCategory.category === category) {
+        //     return content}
+        // })
+
+        // const OptionsCategory = Options.filter((bur)=> {
+        //     if (BURGER.category === "BURGER") {
+        //         console.log(burger)
+        //     } else if (PIZZA.category === "PIZZA") {
+        //         console.log(pizza)
+        //     } else (ITALIAN.category === "ITALIAN") {
+        //         console.log(italian)
+        //     }
+        // })
+
+        const OptionsCategory = Options.filter((BURGER)=> 
+        BURGER.category.includes ===("BURGER") );
+            console.log(OptionsCategory)
+        
+
+        // const OptionsCategory2 = Options.filter((bur)=> 
+        // PIZZA.category === "PIZZA" {
+        //     console.log(pizza)
+        // })
+
+        // const OptionsCategory3 = Options.filter((bur)=> 
+        // ITALIAN.category === "ITALIAN" {
+        //     console.log(italian)
+        // })
+
+
+// if (category === "ALL") {
+//     (Options)
+// }
 })
 })
 
