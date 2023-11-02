@@ -143,7 +143,7 @@ renderizarProductos(Options)
 
  // Filter Items
 
- function renderizarBotones (){
+function renderizarBotones (){
     const contenedorBotones = document.querySelector ("#btn-container")
     BOTONES.forEach((categoria)=> {
         const $button = document.createElement ("button")
