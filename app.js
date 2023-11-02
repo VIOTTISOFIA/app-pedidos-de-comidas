@@ -18,10 +18,12 @@
 const titulo = document.querySelector ("h1").textContent = "Welcome to Smart Order"
 console.log (titulo)
 
-const shopContent = document.getElementById ("shopContent")
+
 const verCarrito = document.getElementById ("verCarrito")
 const modalContainer = document.getElementById("modal-container")
-const filterBtns = document.querySelectorAll (".filter-btn")
+
+
+
 
 const Options = [
     {id: 1, category:"BURGER",title: "Homestyle Bacon pepper", precio: 1500, img:"./img/burger.png", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
@@ -38,80 +40,155 @@ const Options = [
     {id: 13, category:"ITALIAN", title: "Calzone", precio: 3500, img:"./img/pasta.png", Desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", }
 
 ];
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito"))||[];
 
-Options.forEach ((items) => {
-    let content = document.createElement("div")
-    content.className = "card"
-    content.innerHTML = `
-        <img src="${items.img}">
-        <h4>${items.title}</h4>
-        <p class="price">${items.precio} $</p>
-        <h6>${items.Desc}</h6>
-    `
-    shopContent.append(content)
-    
-    let addOrder = document.createElement ("button")
-    addOrder.innerText = "Add Order"
-    addOrder.className = "Add Order"
-    content.append(addOrder)
+const $contenedorProductos = document.querySelector("#shopContent")
+const BOTONES = ["BURGER","PIZZA","ITALIAN"]
 
-    addOrder.addEventListener("click", () => {
-        carrito.push({
-            id:items.id,
-            img: items.title,
-            precio: items.precio
-        })
-        console.log(carrito)
+function filterProductos(categoria) {
+    // const productosFiltrados = Options.filter((producto)=> producto.category === categoria) FILTER EN UNA SOLA LINEA, RETURN IMPLICITO
+
+    const productosFiltrados = Options.filter ((producto)=>{
+        return producto.category === categoria; 
     })
+
+    return productosFiltrados
+}
+
+function renderizarProductos (productos){
+    $contenedorProductos.innerHTML = "";
+
+    productos.forEach ((producto) => {
+        console.log(productos)
+    const $div = document.createElement("div")
+    $div.classList.add('producto');
+    $div.innerHTML = `
+        <img src="${producto.img}" alt="${producto.title}>
+        <p class="price">${producto.precio} $</p>
+        <h6>${producto.Desc}</h6>
+        `;
+    $contenedorProductos.appendchild($div);
 })
 
-verCarrito.addEventListener("click",()=>{
-    const modalHeader = document.createElement ("div")
-modalHeader.innerHTML = `
-<h1 class="modal-header-title">Carrito.</h1>
-`
-modalContainer.append(modalHeader)
+    
+
+// productos.forEach ((items) => {
+//     let content = document.createElement("div")
+// content.className = "card"
+//     content.innerHTML = `
+//     <img src="${items.img}">
+//         <h4>${items.title}</h4>
+//         <p class="price">${items.precio} $</p>
+//         <h6>${items.Desc}</h6>
+//     `;
+//     $contenedorProductos.append(content)
+// }
+//     shopContent.append(content)
+    
+//     let addOrder = document.createElement ("button")
+//     addOrder.innerText = "Add Order"
+//     addOrder.className = "Add Order"
+//     content.append(addOrder)
+
+    // addOrder.addEventListener("click", () => {
+    //     carrito.push({
+    //         id:items.id,
+    //         img: items.title,
+    //         precio: items.precio
+    //     })
+    //     console.log(carrito)
+    //     saveLocal ()
+    // })
+
+}
+renderizarProductos(Options)
 
 
-const modalHeaderbutton = document.createElement("h1")
-modalHeaderbutton.innerText ="X"
-modalHeaderbutton.className = "modal-header-button"
-modalHeader.append(modalHeaderbutton)
+// verCarrito.addEventListener("click",()=>{
+//     const modalHeader = document.createElement ("div")
+// modalHeader.innerHTML = `
+// <h1 class="modal-header-title">Carrito.</h1>
+// `
+// modalContainer.append(modalHeader)
 
-carrito.forEach( (items) => {
-    let carritoContent = document.createElement("div")
-    carritoContent.className = "modal-content"
-    carritoContent.innerHTML = `
-        <img src= "${items.img}">
-        <h3>${items.title}</h3>
-        <p>${items.precio}$</p>
 
-    `
+// const modalHeaderbutton = document.createElement("h1")
+// modalHeaderbutton.innerText ="X"
+// modalHeaderbutton.className = "modal-header-button"
+// modalHeader.append(modalHeaderbutton)
 
-modalContainer.append(carritoContent)
-})
+// carrito.forEach( (items) => {
+//     let carritoContent = document.createElement("div")
+//     carritoContent.className = "modal-content"
+//     carritoContent.innerHTML = `
+//         <img src="${items.img}">
+//         <h4>${items.title}</h4>
+//         <p class="price">${items.precio} $</p>
+//         <h6>${items.Desc}</h6>
+//     `
 
-const total = carrito.reduce ((acc, items) => acc + items.precio, 0)
+// modalContainer.append(carritoContent)
+// })
 
-const totalBuying = document.createElement("div")
-totalBuying.className = "total-content"
-totalBuying.innerHTML = `total a pagar: ${total}$` 
+// const total = carrito.reduce ((acc, items) => acc + items.precio, 0)
 
-modalContainer.append(totalBuying)
+// const totalBuying = document.createElement("div")
+// totalBuying.className = "total-content"
+// totalBuying.innerHTML = `total a pagar: ${total}$` 
 
-})
+// modalContainer.append(totalBuying)
+
+// })
 
 
  // Filter Items
 
-filterBtns.forEach(function (btn){
-    btn.addEventListener ("click", function (e) {
-//         const category = e.currentTarget.dataset.id
-        // const OptionsCategory = Options.filter ((Op)=> {
-        //  if (OptionsCategory.category === category) {
-        //     return content}
-        // })
+ function renderizarBotones (){
+    const contenedorBotones = document.querySelector ("#btn-container")
+    BOTONES.forEach((categoria)=> {
+        const $button = document.createElement ("button")
+        $button.classList.add('btn')
+        $button.textContent = categoria
+        $button.addEventListener("click", ()=>{
+            const productosFiltrados = filterProductos(categoria)
+            renderizarProductos(productosFiltrados)
+        })
+        contenedorBotones.appendChild($button)
+    })
+}
+
+renderizarBotones()
+
+
+
+//set Item 
+
+const saveLocal = () => {
+    localStorage.setItem("carrito",JSON.stringify(carrito))
+}
+
+
+
+// filterBtns.forEach((btn)=> {
+//     btn.addEventListener ("click", (e) => {
+//         // const Options = e.currentTarget.dataset.id
+//         const OptionsCategory = Options.filter((items) => { 
+//         if (OptionsCategory.category === category)
+//         console.log(OptionsCategory)
+        
+//     {
+// return OptionsCategory;
+// }
+//     })
+// else if (category === "ALL") {
+//     (Options)
+// } else {
+// (OptionsCategory)
+// } 
+// })
+// })
+
+
 
         // const OptionsCategory = Options.filter((bur)=> {
         //     if (BURGER.category === "BURGER") {
@@ -123,9 +200,15 @@ filterBtns.forEach(function (btn){
         //     }
         // })
 
-        const OptionsCategory = Options.filter((BURGER)=> 
-        BURGER.category.includes ===("BURGER") );
-            console.log(OptionsCategory)
+        // opcion de Luis
+
+//         const OptionsCategory = Options.filter((BURGER)=> {
+//         BURGER.category ="BURGER"
+// })
+//             console.log(OptionsCategory)
+
+        
+            
         
 
         // const OptionsCategory2 = Options.filter((bur)=> 
@@ -136,14 +219,11 @@ filterBtns.forEach(function (btn){
         // const OptionsCategory3 = Options.filter((bur)=> 
         // ITALIAN.category === "ITALIAN" {
         //     console.log(italian)
-        // })
 
 
-// if (category === "ALL") {
-//     (Options)
-// }
-})
-})
+
+
+
 
 
 // function displayOptionsItems (OptionsItems) {
@@ -160,12 +240,12 @@ filterBtns.forEach(function (btn){
                             
 //                             </header>
                             
-//     </article>`
+// </article>`
     
     
-//     })
-//     displayOptions = displayOptions.join("");
-//     sectioncenter.innerHTML = displayOptions
+// })
+//     // displayOptions = displayOptions.join("");
+//     // sectioncenter.innerHTML = displayOptions
 //     }
 
 // // crear un algoritmo con un condicional 
@@ -387,16 +467,16 @@ filterBtns.forEach(function (btn){
 
 //EVENTO 
 
-// const contenedor = document.querySelector (".burger")
-// contenedor.addEventListener("mouseenter",()=> {console.log ("mouse dentro del container")})
+// // const contenedor = document.querySelector (".burger")
+// // contenedor.addEventListener("mouseenter",()=> {console.log ("mouse dentro del container")})
 
-// console.log (contenedor)
+// // console.log (contenedor)
 
 
-// const boton = document.querySelector ("#boton")
-// boton.addEventListener ("click", ()=> {alert ("me diste click")})
+// // const boton = document.querySelector ("#boton")
+// // boton.addEventListener ("click", ()=> {alert ("me diste click")})
 
-// const nombreinput = document.querySelector ("#name")
+// // const nombreinput = document.querySelector ("#name")
 
-// nombreinput.addEventListener ("keydown", ()=> {console.log ("Escribiendo")})
-// console.log (nombreinput)
+// // nombreinput.addEventListener ("keydown", ()=> {console.log ("Escribiendo")})
+// // console.log (nombreinput)}
