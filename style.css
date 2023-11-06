@@ -1,0 +1,119 @@
+/* product cards */
+.shop-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0 0,2);
+    /* max-width: 250px;
+    height: 450px;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small; */
+    border: 1px black;
+        width: 250px;
+        height: 450px;
+        text-align: center;
+        background-color: #8bc4cb38;
+        color: black;
+        margin: 15px;
+        display: inline-block;
+        border-radius: 8px;
+        font-size: 16px;
+}
+
+.card > img {
+width: 90%;
+height: 200px;
+}
+
+.price {
+    color: black;
+    font-size: 22px;
+}
+
+.modal-content > img {
+width: 80px;
+height: 80px;
+}
+
+/* modal content  */
+.modal-container {
+    width: 80% ;
+    margin: 0 10% ;
+    max-height: 88vh;
+    color: #fff;
+    background-color:#8bc4cb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+
+    /* for the top */
+
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+}
+
+.modal-container::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-header {
+    display: flex;
+    justify-content:space-around;
+    background-color: #8bc4cb;
+    color: #fff;
+    width: 100%;
+
+}
+
+.modal-header-title {
+    justify-self: start;
+
+}
+
+.modal-header-button {
+    cursor: pointer;
+}
+
+.modal-container > .modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin:10px;
+}
+
+.modal-container > div > img {
+    height: 120px;
+    width: 120px;
+    margin-right: 20px;
+}
+
+.total-content {
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+form {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+form .btn-form {
+    color:#8bc4cb;
+    background-color: black;
+}
