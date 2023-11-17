@@ -15,7 +15,7 @@
     "title": "Chicken salsa cheese",
     "precio": 2000,
     "img": "./img/burger.png",
-    "Desc": "A crispy breaded chicken combined with a salsa sauce, salad and mayo in sesame bun.",
+    "Desc": "A crispy breaded chicken combined with a salsa sauce, mustard, ketchup and slice of melted cheese, salad and mayo in sesame bun.",
     "quantity": 1
   },
 
@@ -65,7 +65,7 @@
     "title": "The mafia",
     "precio": 3000,
     "img": "./img/pizza.png",
-    "Desc": "Organic pizza dough tomato, cheese, ham and pepperoni.",
+    "Desc": "Tomato, cheese, ham and pepperoni.",
     "quantity": 1
   },
 

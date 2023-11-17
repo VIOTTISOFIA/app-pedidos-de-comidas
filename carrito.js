@@ -5,7 +5,7 @@ const pintarCarrito = () => {
     modalContainer.style.display = "flex"
 const modalHeader = document.createElement ("div")
 modalHeader.innerHTML = `
-<h1 class="modal-header-title">Orders.</h1>
+<h1 class="modal-header-title">Order.</h1>
 `;
 modalContainer.append(modalHeader)
 
