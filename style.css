@@ -1,3 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-left: 10px;
+
+}
+
+/* header button  */
+.filter-button{
+   background-color:#a1dfe7;
+   padding: .5rem;
+   margin-right:60.5rem ;
+   /* margin-left: 50rem; */
+   height:20%;
+   text-align: center;
+   border-radius: 100vmax; ;
+   text-transform: uppercase;
+   font-weight: 100px;
+   box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
+   
+}
+
+
+
+
+
 /* product cards */
 .shop-content {
     display: flex;
@@ -7,8 +37,30 @@
     margin-left: 80px;
     margin-right: 80px;
 }
-
+body{
+        /* display: flex; */
+        /* justify-content:space-around ;
+        align-items: center;
+        flex-wrap: wrap; */
+        /* margin-top: 30px;
+        margin-left: 80px;
+        margin-right: 80px; */
+}
 .card {
+    border: 1px black;
+        width: 250px;
+        height: 400px;
+        text-align: center;
+        background-color:#8bc4cb38 ;
+        color: black;
+        margin: 15px;
+        display: inline-block;
+        border-radius: 8px;
+        font-size: 20px;
+    /* padding: 10px;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center; */
     box-shadow: 0 4px 8px 0 rgba (0, 0, 0 0,2);
     /* max-width: 250px;
     height: 450px;
@@ -16,28 +68,37 @@
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: small; */
-    border: 1px black;
-        width: 250px;
-        height: 450px;
-        text-align: center;
-        background-color: #8bc4cb38;
-        color: black;
-        margin: 15px;
-        display: inline-block;
-        border-radius: 8px;
-        font-size: 16px;
 }
 
 .card > img {
 width: 90%;
 height: 200px;
 }
+h4{
+    color: black;
+        font-size: 18px;
+}
 
 .price {
     color: black;
-    font-size: 22px;
+    font-size: 18px;
 }
+h6 {
+    color: black;
+        font-size: 15px;
+}
+.card > button {
+    background-color: #a1dfe7;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 90vmax;
+    margin-top: 3px;
+    text-transform: uppercase;
+    /* font-weight: 80px; */
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .25) 
 
+
+}
 .modal-content > img {
 width: 80px;
 height: 80px;
@@ -48,12 +109,13 @@ height: 80px;
     width: 80% ;
     margin: 0 10% ;
     max-height: 88vh;
-    color: #fff;
-    background-color:#8bc4cb;
+    color: black;
+    background-color:#a1dfe7;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 10px;
+    font-size: 15px;
+
 
     /* for the top */
 
@@ -71,17 +133,20 @@ height: 80px;
 .modal-header {
     display: flex;
     justify-content:space-around;
-    background-color: #8bc4cb;
-    color: #fff;
+    background-color: #a1dfe7;
+    color:black;
     width: 100%;
 
 }
 
 .modal-header-title {
-    justify-self: start;
+    justify-self:self-start;
 
 }
-
+.delete-product{
+    height: 30px;
+        width: 30px;
+} 
 .modal-header-button {
     cursor: pointer;
 }
@@ -96,24 +161,45 @@ height: 80px;
 }
 
 .modal-container > div > img {
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
     margin-right: 20px;
 }
 
 .total-content {
-    font-size: 25px;
+    font-size: 30px;
     padding: 20px;
     text-align: center;
     padding-top: 20px;
 }
 
+
 form {
+    margin-left:10px ;
     margin-top: 30px;
     margin-bottom: 20px;
     width: 80%;
 }
+h2 {
+margin-left: 10px;
+}
 form .btn-form {
-    color:#8bc4cb;
+    color:#a1dfe7;
     background-color: black;
+}
+/* delete button product */
+.delete-product {
+    cursor:pointer ;
+}
+/* carrito counter */
+.cantidad-carrito {
+    background-color: #a1dfe7;
+    color:black;
+    border-radius: 50%;
+    font-size: 15px;
+    padding: 4px;
+    top: 37px;
+    right: 14px;
+    position: absolute;
+    display: nones;
 }
