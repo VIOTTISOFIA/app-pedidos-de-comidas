@@ -5,7 +5,7 @@ const pintarCarrito = () => {
     modalContainer.style.display = "flex"
 const modalHeader = document.createElement ("div")
 modalHeader.innerHTML = `
-<h1 class="modal-header-title">Carrito.</h1>
+<h1 class="modal-header-title">Orders.</h1>
 `;
 modalContainer.append(modalHeader)
 
@@ -25,7 +25,7 @@ carrito.forEach( (producto) => {
         <img src="${producto.img}">
         <h4>${producto.title}</h4>
         <p class="price">${producto.precio} $</p>
-        <p>Cantidad: ${producto.quantity}</p>
+        <p>Quantity: ${producto.quantity}</p>
     `;
 
     modalContainer.append(carritoContent);
