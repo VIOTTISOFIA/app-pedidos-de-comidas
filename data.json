@@ -1,97 +1,121 @@
 [
-    {"id": 1,
-    "category":"BURGER",
-    "title": "Homestyle Bacon pepper", 
+  {
+    "id": 1,
+    "category": "BURGER",
+    "title": "Homestyle Bacon pepper",
     "precio": 1500,
-    "img":"./img/burger.png",
-    "Desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 
-    "quantity": 1},
-    
-    {"id": 2,
-    "category":"BURGER",
+    "img": "./img/burger.png",
+    "Desc": "A beef steak, smoked paprika mayo, two slices of melted cheese with cheddar and two slices of bacon in a brioche bun.",
+    "quantity": 1
+  },
+
+  {
+    "id": 2,
+    "category": "BURGER",
     "title": "Chicken salsa cheese",
-    "precio":2000,
-    "img":"./img/burger.png", 
-    "Desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "quantity": 1},
+    "precio": 2000,
+    "img": "./img/burger.png",
+    "Desc": "A crispy breaded chicken combined with a salsa sauce, salad and mayo in sesame bun.",
+    "quantity": 1
+  },
 
-    {"id": 3,
-    "category":"BURGER",
-    "title": "Cheeseburger", 
-    "precio":3000,
-    "img":"./img/burger.png",
-    "Desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "quantity":1 },
+  {
+    "id": 3,
+    "category": "BURGER",
+    "title": "Cheeseburger",
+    "precio": 3000,
+    "img": "./img/burger.png",
+    "Desc": "A steak of 100% beef, chopped onions, pickles, mustard, ketchup and slice of melted cheese with cheddar in a toasted bun.",
+    "quantity": 1
+  },
 
-    {"id": 4,
-    "category":"BURGER",
-    "title": "Big tasty bacon menu",
-    "precio": 3500, 
-    "img":"./img/burger.png",
-    "Desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "quantity": 1},
+  {
+    "id": 4,
+    "category": "BURGER",
+    "title": "Big tasty chicken menu",
+    "precio": 3500,
+    "img": "./img/burger.png",
+    "Desc": "Crispy breaded chicken, tasty sauce, slices of elemmental cheese, lettuce, tomato, and a sesame bun, fries and cold drink.",
+    "quantity": 1
+  },
 
-    {"id": 5,
-    "category":"PIZZA", 
-    "title": "Margherita", 
-    "precio": 1500, 
-    "img": "./img/pizza.png", 
-    "Desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "quantity": 1},
-
-    {"id": 7, 
-    "category":"PIZZA", 
-    "title": "Capricciosa", 
-    "precio":2000, 
-    "img": "./img/pizza.png", 
-    "Desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "quantity": 1},
-
-    {"id": 8, 
-    "category":"PIZZA",
-    "title": "Quatro stagione", 
-    "precio":3000, 
+  {
+    "id": 5,
+    "category": "PIZZA",
+    "title": "Margherita",
+    "precio": 1500,
     "img": "./img/pizza.png",
-    "Desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "quantity": 1},
+    "Desc": "Tomato and cheese.",
+    "quantity": 1
+  },
 
-    {"id": 9, 
-    "category":"PIZZA", 
-    "title": "Hawaii", 
-    "precio": 3500, 
-    "img": "./img/pizza.png", 
-    "Desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "quantity": 1},
+  {
+    "id": 7,
+    "category": "PIZZA",
+    "title": "Capricciosa",
+    "precio": 2000,
+    "img": "./img/pizza.png",
+    "Desc": "Tomato, cheese, ham, mushrooms.",
+    "quantity": 1
+  },
 
-    {"id": 10, 
-    "category":"ITALIAN", 
-    "title": "Pane con carne e prezzemolo", 
-    "precio": 1500, 
-    "img":"./img/pasta.png", 
-    "Desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "quantity": 1},
+  {
+    "id": 8,
+    "category": "PIZZA",
+    "title": "The mafia",
+    "precio": 3000,
+    "img": "./img/pizza.png",
+    "Desc": "Organic pizza dough tomato, cheese, ham and pepperoni.",
+    "quantity": 1
+  },
 
-    {"id": 11,
-    "category":"ITALIAN", 
-    "title": "Bruschetta", 
-    "precio":2000, 
-    "img":"./img/pasta.png",
-    "Desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "quantity": 1},
+  {
+    "id": 9,
+    "category": "PIZZA",
+    "title": "Hawaii",
+    "precio": 3500,
+    "img": "./img/pizza.png",
+    "Desc": "Tomato, cheese, ham, pineapple.",
+    "quantity": 1
+  },
 
-    {"id": 12, 
-    "category":"ITALIAN", 
+  {
+    "id": 10,
+    "category": "ITALIAN",
+    "title": "Lasagne",
+    "precio": 1500,
+    "img": "./img/pasta.png",
+    "Desc": "Meat sauce, bechamel sauce, pasta plates and cheese.",
+    "quantity": 1
+  },
+
+  {
+    "id": 11,
+    "category": "ITALIAN",
+    "title": "Bruschetta",
+    "precio": 2000,
+    "img": "./img/pasta.png",
+    "Desc": "Garlic bread with cheese and fresh tomato.",
+    "quantity": 1
+  },
+
+  {
+    "id": 12,
+    "category": "ITALIAN",
     "title": "Carpaccio di bresaola",
-    "precio":3000, 
-    "img":"./img/pasta.png",
-    "Desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "quantity": 1},
+    "precio": 3000,
+    "img": "./img/pasta.png",
+    "Desc": "Thin slices of veal, olive oil, arugula and parmesan.",
+    "quantity": 1
+  },
 
-    {"id": 13, 
-    "category":"ITALIAN", 
+  {
+    "id": 13,
+    "category": "ITALIAN",
     "title": "Calzone",
-    "precio": 3500, 
-    "img":"./img/pasta.png", 
-    "Desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "quantity": 1}
+    "precio": 3500,
+    "img": "./img/pasta.png",
+    "Desc": "Baked pizza with tomato, cheese, cooked Italian ham and mushrooms.",
+    "quantity": 1
+  }
 ]

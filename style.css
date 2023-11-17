@@ -11,63 +11,40 @@ h1 {
 
 /* header button  */
 .filter-button{
-   background-color:#a1dfe7;
-   padding: .5rem;
-   margin-right:60.5rem ;
-   /* margin-left: 50rem; */
-   height:20%;
-   text-align: center;
-   border-radius: 100vmax; ;
-   text-transform: uppercase;
-   font-weight: 100px;
-   box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
-   
+background-color:#a1dfe7;
+padding: .5rem;
+margin-right:60.5rem ;
+height:20%;
+text-align: center;
+border-radius: 100vmax; ;
+text-transform: uppercase;
+font-weight: 100px;
+box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
+margin-left: 30px;
 }
-
-
-
-
 
 /* product cards */
 .shop-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    margin-left: 80px;
-    margin-right: 80px;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+margin-top: 30px;
+margin-left: 80px;
+margin-right: 80px;
 }
-body{
-        /* display: flex; */
-        /* justify-content:space-around ;
-        align-items: center;
-        flex-wrap: wrap; */
-        /* margin-top: 30px;
-        margin-left: 80px;
-        margin-right: 80px; */
-}
+
 .card {
-    border: 1px black;
-        width: 250px;
-        height: 400px;
-        text-align: center;
-        background-color:#8bc4cb38 ;
-        color: black;
-        margin: 15px;
-        display: inline-block;
-        border-radius: 8px;
-        font-size: 20px;
-    /* padding: 10px;
-    display: inline-block;
-    justify-content: space-between;
-    align-items: center; */
-    box-shadow: 0 4px 8px 0 rgba (0, 0, 0 0,2);
-    /* max-width: 250px;
-    height: 450px;
-    margin: auto;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: small; */
+border: 1px black;
+width: 250px;
+height: 400px;
+text-align: center;
+background-color:#8bc4cb38 ;
+color: black;
+margin: 15px;
+display: inline-block;
+border-radius: 8px;
+font-size: 20px;
+box-shadow: 0 4px 8px 0 rgba (0, 0, 0 0,2);
 }
 
 .card > img {
@@ -75,27 +52,26 @@ width: 90%;
 height: 200px;
 }
 h4{
-    color: black;
-        font-size: 18px;
+color: black;
+font-size: 18px;
 }
 
 .price {
-    color: black;
-    font-size: 18px;
+color: black;
+font-size: 18px;
 }
 h6 {
-    color: black;
-        font-size: 15px;
+color: black;
+font-size: 15px;
 }
 .card > button {
-    background-color: #a1dfe7;
-    font-size: 18px;
-    text-align: center;
-    border-radius: 90vmax;
-    margin-top: 3px;
-    text-transform: uppercase;
-    /* font-weight: 80px; */
-    box-shadow: 0 0 1rem rgba(0, 0, 0, .25) 
+background-color: #a1dfe7;
+font-size: 18px;
+text-align: center;
+border-radius: 90vmax;
+margin-top: 3px;
+text-transform: uppercase;
+box-shadow: 0 0 1rem rgba(0, 0, 0, .25) 
 
 
 }
@@ -106,28 +82,28 @@ height: 80px;
 
 /* modal content  */
 .modal-container {
-    width: 80% ;
-    margin: 0 10% ;
-    max-height: 88vh;
-    color: black;
-    background-color:#a1dfe7;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 15px;
+width: 80% ;
+margin: 0 10% ;
+max-height: 88vh;
+color: black;
+background-color:#a1dfe7;
+display: flex;
+flex-direction: column;
+align-items: center;
+font-size: 15px;
 
 
-    /* for the top */
+/* for the top */
 
-    position: fixed;
-    overflow: auto;
-    z-index: 9;
-    top: 12vh;
-    scrollbar-color: none;
+position: fixed;
+overflow: auto;
+z-index: 9;
+top: 12vh;
+scrollbar-color: none;
 }
 
 .modal-container::-webkit-scrollbar {
-    display: none;
+display: none;
 }
 
 .modal-header {
