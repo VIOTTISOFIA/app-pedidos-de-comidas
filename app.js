@@ -11,7 +11,7 @@ const cantidadCarrito = document.getElementById ("cantidadCarrito")
 
 
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 const $contenedorProductos = document.querySelector("#shopContent")
 const BOTONES = ["BURGER","PIZZA","ITALIAN"]
@@ -103,9 +103,9 @@ getProductos()
 
 //set Item 
 
-// const saveLocal = () => {
-//     localStorage.setItem("carrito",JSON.stringify(carrito))
-// }
+const saveLocal = () => {
+localStorage.setItem("carrito",JSON.stringify(carrito))
+}
 
 //FORM 
 

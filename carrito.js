@@ -71,6 +71,7 @@ const cancelProducto = () => {
 
 })
     carritoCounter()
+    saveLocal ()
     pintarCarrito()
 }
 
